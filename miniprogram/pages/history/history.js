@@ -328,6 +328,10 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+    this.setData({
+      pagePut: 0,
+      pageOut: 0
+    })
     if(this.data.active == true){
       this.getPutData("pull")
     }else{
